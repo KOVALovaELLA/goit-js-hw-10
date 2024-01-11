@@ -5,14 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js"></script>
+    <link rel="stylesheet" href="path/to/your/iziToast.min.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+      }
+
+      .form {
+        max-width: 250px;
+        margin-top: 10px;
+      }
+      button {
+        max-width: 250px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      fieldset {
+        margin-bottom: 15px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 15px;
+      }
+      label {
+        margin-bottom: 5px;
+        gap: 10px;
+      }
+    </style>
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-651d7991.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
-      <h1>Welcome to page 3</h1>
     </section>
 
+    <form class="form" id="notificationForm">
+      <label class="form-group">
+        Delay (ms)
+        <input type="number" name="delay" required />
+      </label>
+
+      <fieldset>
+        <legend>State</legend>
+        <label>
+          <input type="radio" name="state" value="fulfilled" required />
+          Fulfilled
+        </label>
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Rejected
+        </label>
+      </fieldset>
+
+      <button type="submit">Create notification</button>
+    </form>
+
     
+    <script src="path/to/your/iziToast.min.js"></script>
   </body>
 </html>
